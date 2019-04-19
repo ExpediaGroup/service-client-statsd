@@ -1,12 +1,13 @@
 # @vrbo/service-client-statsd
+![travis-ci-badge](https://travis-ci.org/homeaway/service-client-statsd.svg?branch=master)
 
-* [Introduction](#introduction)
+A [Service Client](https://github.com/homeaway/service-client) plugin for reporting operational metrics to a [StatsD](https://github.com/statsd/statsd) daemon.
+
+## Contents
 * [Usage](#usage)
+* [Configuration Options](#configuration-options)
 * [Development](#development)
 * [Further Reading](#further-reading)
-
-## Introduction
-A [Service Client](https://github.com/homeaway/service-client) plugin for reporting operational metrics to a [StatsD](https://github.com/statsd/statsd) daemon.
 
 ## Usage
 ```javascript
