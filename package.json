@@ -1,6 +1,6 @@
 {
   "name": "@vrbo/service-client-statsd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Service Client plugin for reporting operational metrics to a StatsD daemon",
   "license": "Apache-2.0",
   "author": {
