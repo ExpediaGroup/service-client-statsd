@@ -30,15 +30,18 @@ describe('metrics', function () {
       }
     })
 
+    suite.debugSpy = suite.sandbox.spy()
     suite.incrementSpy = suite.sandbox.spy()
     suite.timingSpy = suite.sandbox.spy()
 
     const ServiceClientStatsD = Proxyquire('../../lib/index', {
-      lynx: function () {
-        return {
-          increment: suite.incrementSpy,
-          timing: suite.timingSpy
-        }
+      debug: function () {
+        return suite.debugSpy
+      },
+      lynx: function Lynx () {
+        this.increment = suite.incrementSpy
+        this.timing = suite.timingSpy
+        return this
       }
     })
 
@@ -121,44 +124,57 @@ describe('metrics', function () {
     })
   })
 
-  describe('success', function () {
+  describe('success (no context)', function () {
     beforeEach(async function () {
       Nock('http://service.local:80')
         .get('/v1/test/endpoint')
         .reply(200, { message: 'success' })
 
       suite.client = ServiceClient.create('myservice')
+
+      await suite.client.request({ method: 'GET', path: '/v1/test/endpoint', operation: 'foobar' })
     })
 
-    it('should log to statsd (no context)', async function () {
-      await suite.client.request({ method: 'GET', path: '/v1/test/endpoint', operation: 'foobar' })
-
+    it('should log to statsd', function () {
       assert.include(suite.incrementSpy.getCall(0).args[0], 'serviceclient.myservice.foobar.statusCode200')
       assert.include(suite.incrementSpy.getCall(1).args[0], 'serviceclient.myservice.foobar.statusCode2xx')
       assert.include(suite.timingSpy.getCall(0).args[0], 'serviceclient.myservice.foobar.total')
     })
+
+    it('should log debug statements', function () {
+      Sinon.assert.calledWith(suite.debugSpy, 'Plugin enabled for request.')
+      Sinon.assert.calledWith(suite.debugSpy, Sinon.match.string, 'Lynx', Sinon.match.string, 'serviceclient.myservice.foobar.statusCode200', 'increment')
+      Sinon.assert.calledWith(suite.debugSpy, Sinon.match.string, 'Lynx', Sinon.match.string, 'serviceclient.myservice.foobar.statusCode2xx', 'increment')
+      Sinon.assert.calledWith(suite.debugSpy, Sinon.match.string, 'Lynx', Sinon.match.string, 'serviceclient.myservice.foobar.total', 'timing', Sinon.match(/value=[0-9]+/))
+    })
   })
 
-  describe('error', function () {
-    beforeEach(function () {
+  describe('error (no context)', function () {
+    beforeEach(async function () {
       Nock('http://service.local:80')
         .get('/v1/test/endpoint')
         .delayConnection(100)
         .reply(200, { message: 'success' })
 
       suite.client = ServiceClient.create('myservice', { timeout: 1 })
-    })
 
-    it('should log to statsd (no context)', async function () {
       try {
         await suite.client.request({ method: 'GET', path: '/v1/test/endpoint', operation: 'foobar' })
         assert.fail('should fail')
       } catch (err) {
         assert.ok(err, 'is error')
       }
+    })
 
+    it('should log to statsd', function () {
       assert.include(suite.incrementSpy.getCall(0).args[0], 'serviceclient.myservice.foobar.errorCode.clientrequesttimeout')
       assert.include(suite.timingSpy.getCall(0).args[0], 'serviceclient.myservice.foobar.total')
+    })
+
+    it('should log debug statements', function () {
+      Sinon.assert.calledWith(suite.debugSpy, 'Plugin enabled for request.')
+      Sinon.assert.calledWith(suite.debugSpy, Sinon.match.string, 'Lynx', Sinon.match.string, 'serviceclient.myservice.foobar.errorCode.clientrequesttimeout', 'increment')
+      Sinon.assert.calledWith(suite.debugSpy, Sinon.match.string, 'Lynx', Sinon.match.string, 'serviceclient.myservice.foobar.total', 'timing', Sinon.match(/value=[0-9]+/))
     })
   })
 })
