@@ -2,6 +2,17 @@
   "name": "@vrbo/service-client-statsd",
   "version": "1.0.1",
   "description": "A Service Client plugin for reporting operational metrics to a StatsD daemon",
+  "keywords": [
+    "http",
+    "statsd",
+    "metrics",
+    "service-client",
+    "service",
+    "homeaway",
+    "vrbo",
+    "expedia",
+    "expediagroup"
+  ],
   "license": "Apache-2.0",
   "author": {
     "name": "Expedia Group",
@@ -23,13 +34,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/homeaway/service-client-statsd.git"
+    "url": "https://github.com/expediagroup/service-client-statsd.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
   "bugs": {
-    "url": "https://github.com/homeaway/service-client-statsd/issues"
+    "url": "https://github.com/expediagroup/service-client-statsd/issues"
   },
   "engines": {
     "node": ">=8.0.0",
