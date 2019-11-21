@@ -1,10 +1,10 @@
 # @vrbo/service-client-statsd
 [![NPM Version](https://img.shields.io/npm/v/@vrbo/service-client-statsd.svg?style=flat-square)](https://www.npmjs.com/package/@vrbo/service-client-statsd)
-[![Build Status](https://travis-ci.org/homeaway/service-client-statsd.svg?branch=master)](https://travis-ci.org/homeaway/service-client-statsd)
-[![Dependency Status](https://david-dm.org/homeaway/service-client-statsd.svg?theme=shields.io)](https://david-dm.org/homeaway/service-client-statsd)
+[![Build Status](https://travis-ci.org/expediagroup/service-client-statsd.svg?branch=master)](https://travis-ci.org/expediagroup/service-client-statsd)
+[![Dependency Status](https://david-dm.org/expediagroup/service-client-statsd.svg?theme=shields.io)](https://david-dm.org/expediagroup/service-client-statsd)
 [![NPM Downloads](https://img.shields.io/npm/dm/@vrbo/service-client-statsd.svg?style=flat-square)](https://npm-stat.com/charts.html?package=@vrbo/service-client-statsd)
 
-A [Service Client](https://github.com/homeaway/service-client) plugin for reporting operational metrics to a [StatsD](https://github.com/statsd/statsd) daemon.
+A [Service Client](https://github.com/expediagroup/service-client) plugin for reporting operational metrics to a [StatsD](https://github.com/statsd/statsd) daemon.
 
 ## Contents
 * [Usage](#usage)
@@ -32,7 +32,7 @@ const client = ServiceClient.create('myservice')
 })()
 ```
 
-See [plugin documentation](https://github.com/homeaway/service-client#plugins) for more usage information.
+See [plugin documentation](https://github.com/expediagroup/service-client#plugins) for more usage information.
 
 ## Configuration Options
 - **hostname** - The hostname used to initialize the internal instance of [Lynx](https://github.com/dscape/lynx). Defaults to `'localhost'`.
