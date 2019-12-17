@@ -1,9 +1,9 @@
 'use strict'
 
-const Boom = require('boom')
+const Boom = require('@hapi/boom')
 const { assert } = require('chai')
-const Hapi = require('hapi')
-const Hoek = require('hoek')
+const Hapi = require('@hapi/hapi')
+const Hoek = require('@hapi/hoek')
 const Nock = require('nock')
 const Sinon = require('sinon')
 const Proxyquire = require('proxyquire')
