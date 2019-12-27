@@ -24,7 +24,7 @@ describe('metrics', function () {
 
     ServiceClient.mergeConfig({
       overrides: {
-        'myservice': {
+        myservice: {
           hostname: 'service.local'
         }
       }
