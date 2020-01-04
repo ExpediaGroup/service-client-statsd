@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "@hapi/hoek": "^8.5.0",
-    "@hapi/joi": "^16.1.8",
+    "@hapi/joi": "^17.0.0",
     "debug": "^4.1.0",
     "lynx": "^0.2.0"
   },
