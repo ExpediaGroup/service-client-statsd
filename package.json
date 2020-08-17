@@ -1,6 +1,6 @@
 {
   "name": "@vrbo/service-client-statsd",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A Service Client plugin for reporting operational metrics to a StatsD daemon",
   "keywords": [
     "http",
@@ -43,19 +43,19 @@
     "url": "https://github.com/expediagroup/service-client-statsd/issues"
   },
   "engines": {
-    "node": ">=8.0.0",
-    "npm": ">=5.0.0"
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
   },
   "dependencies": {
-    "@hapi/hoek": "^8.5.0",
-    "@hapi/joi": "^16.1.8",
+    "@hapi/hoek": "^9.0.4",
     "debug": "^4.1.0",
+    "joi": "^17.2.0",
     "lynx": "^0.2.0"
   },
   "devDependencies": {
     "@hapi/boom": "^8.0.1",
-    "@hapi/hapi": "^18.4.0",
-    "@vrbo/service-client": "^2.0.0",
+    "@hapi/hapi": "^19.0.0",
+    "@vrbo/service-client": "^3.0.0",
     "chai": "^4.2.0",
     "eslint-config-standard": "^14.0.0",
     "eslint-plugin-import": "^2.16.0",
@@ -64,10 +64,9 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint": "^7.0.0",
     "mocha": "^8.0.0",
-    "nock": "^12.0.0",
+    "nock": "^13.0.0",
     "nyc": "^15.0.0",
     "proxyquire": "^2.1.0",
     "sinon": "^9.0.0"
-  },
-  "peerDependencies": {}
+  }
 }
