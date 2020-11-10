@@ -59,6 +59,7 @@ Use the `serviceclient:plugin:statsd` namespace to log related information:
 ```bash
 DEBUG=serviceclient:plugin:statsd npm test
 ```
+  
 
 ## Further Reading
 * [License](LICENSE)
