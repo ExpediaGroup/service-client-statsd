@@ -94,7 +94,24 @@ describe('metrics', function () {
       suite.client = ServiceClient.create('myservice', {
         plugins: {
           statsd: {
-            transmit: false
+            transmit: false,
+            lynxOptions: { tcp: false }
+          }
+        }
+      })
+
+      await suite.client.request({ method: 'GET', path: '/v1/test/endpoint', operation: 'foobar' })
+
+      Sinon.assert.notCalled(suite.incrementSpy)
+      Sinon.assert.notCalled(suite.timingSpy)
+    })
+
+    it('should NOT log if `transmit: false`', async function () {
+      suite.client = ServiceClient.create('myservice', {
+        plugins: {
+          statsd: {
+            transmit: false,
+            lynxOptions: { tcp: true }
           }
         }
       })
