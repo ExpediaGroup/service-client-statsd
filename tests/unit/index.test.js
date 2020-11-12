@@ -94,8 +94,7 @@ describe('metrics', function () {
       suite.client = ServiceClient.create('myservice', {
         plugins: {
           statsd: {
-            transmit: false,
-            lynxOptions: { tcp: false }
+            transmit: false
           }
         }
       })
@@ -111,7 +110,7 @@ describe('metrics', function () {
         plugins: {
           statsd: {
             transmit: false,
-            lynxOptions: { tcp: true }
+            tcp: true
           }
         }
       })
