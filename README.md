@@ -36,7 +36,8 @@ See [plugin documentation](https://github.com/expediagroup/service-client#plugin
 
 ## Configuration Options
 - **hostname** - The hostname used to initialize the internal instance of [Lynx](https://github.com/dscape/lynx). Defaults to `'localhost'`.
-- **port** - The port used to initilize the internal instance of [Lynx](https://github.com/dscape/lynx). Defaults to `8125`.
+- **port** - The port used to initialize the internal instance of [Lynx](https://github.com/dscape/lynx). Defaults to `8125`.
+- **tcp** - Whether or not to transmit stats via TCP. Defaults to `false`.
 - **lynxOptions** - Additional configuration options used to initilize the internal instance of [Lynx](https://github.com/dscape/lynx).
 - **transmit** - A boolean indicating whether or not to actually send these metrics to the [Lynx](https://github.com/dscape/lynx) instance. Defaults to `true`.
 - **prefix** - An optional value to prepend to the beginning of the metrics key reported to StatsD.
