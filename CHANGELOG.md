@@ -1,3 +1,7 @@
+### 2.1.0 - 2020-11-13
+
+- Add support for transmitting stats via TCP
+
 ### 2.0.1 - 2020-08-19
 
 - Update dev dependencies
