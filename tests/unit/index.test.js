@@ -105,6 +105,22 @@ describe('metrics', function () {
       Sinon.assert.notCalled(suite.timingSpy)
     })
 
+    it('should NOT log if `transmit: false`', async function () {
+      suite.client = ServiceClient.create('myservice', {
+        plugins: {
+          statsd: {
+            transmit: false,
+            tcp: true
+          }
+        }
+      })
+
+      await suite.client.request({ method: 'GET', path: '/v1/test/endpoint', operation: 'foobar' })
+
+      Sinon.assert.notCalled(suite.incrementSpy)
+      Sinon.assert.notCalled(suite.timingSpy)
+    })
+
     it('should reuse cached statsd api object', async function () {
       Nock('http://service.local:80')
         .get('/v1/test/endpoint')
