@@ -56,7 +56,7 @@
   "devDependencies": {
     "@hapi/boom": "^9.0.0",
     "@hapi/hapi": "^20.2.1",
-    "@vrbo/service-client": "^3.0.0",
+    "@vrbo/service-client": "^4.0.0",
     "chai": "^4.2.0",
     "eslint-config-standard": "^16.0.0",
     "eslint-plugin-import": "^2.16.0",
