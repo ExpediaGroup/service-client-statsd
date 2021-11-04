@@ -1,3 +1,9 @@
+### 3.0.0 - 2021-11-04
+
+- [Breaking] Drop support for node < 14.
+- Update Github test workflow to only test node v 14.x
+- Update dependencies, npm, and engines in package.json to support node version >= 14.
+
 ### 2.1.0 - 2020-11-13
 
 - Add support for transmitting stats via TCP
