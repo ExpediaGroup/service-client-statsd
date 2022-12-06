@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/expediagroup/service-client-statsd/compare/v3.0.1...v3.1.0) (2022-12-06)
+
+
+### Features
+
+* empty commit to trigger release pipeline ([#50](https://github.com/expediagroup/service-client-statsd/issues/50)) ([27cc16e](https://github.com/expediagroup/service-client-statsd/commit/27cc16e98907693f165e00dd5f92d200de6b569c))
+
 ## [3.0.1](https://github.com/expediagroup/service-client-statsd/compare/v3.0.0...v3.0.1) (2022-01-07)
 
 ### Bug Fixes
