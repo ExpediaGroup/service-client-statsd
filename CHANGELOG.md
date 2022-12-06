@@ -1,6 +1,5 @@
 ## [3.0.1](https://github.com/expediagroup/service-client-statsd/compare/v3.0.0...v3.0.1) (2022-01-07)
 
-
 ### Bug Fixes
 
 * **semantic-release:** add semantic release ([#46](https://github.com/expediagroup/service-client-statsd/issues/46)) ([c04279b](https://github.com/expediagroup/service-client-statsd/commit/c04279b3ce6d13ddab27a14ed72474b62514810f))
