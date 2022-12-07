@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/expediagroup/service-client-statsd/compare/v3.1.0...v3.2.0) (2022-12-07)
+
+
+### Features
+
+* upgrade to node v16 ([#51](https://github.com/expediagroup/service-client-statsd/issues/51)) ([b3111d7](https://github.com/expediagroup/service-client-statsd/commit/b3111d793146047e6535756069195bfe03dad76c))
+
 # [3.1.0](https://github.com/expediagroup/service-client-statsd/compare/v3.0.1...v3.1.0) (2022-12-06)
 
 
