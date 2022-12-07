@@ -55,6 +55,7 @@
   "dependencies": {
     "@hapi/hoek": "^9.0.4",
     "debug": "^4.1.0",
+    "eslint-plugin-n": "^15.6.0",
     "joi": "^17.2.0",
     "lynx": "^0.2.0",
     "statsd-client": "^0.4.5"
