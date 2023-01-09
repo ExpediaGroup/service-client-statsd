@@ -1,3 +1,10 @@
+## [3.2.1](https://github.com/expediagroup/service-client-statsd/compare/v3.2.0...v3.2.1) (2023-01-09)
+
+
+### Bug Fixes
+
+* build(deps): bump json5 from 1.0.1 to 1.0.2 ([#52](https://github.com/expediagroup/service-client-statsd/issues/52)) ([8e27cd0](https://github.com/expediagroup/service-client-statsd/commit/8e27cd0dc2111993645b9e5a75dc331d83b2c60d))
+
 # [3.2.0](https://github.com/expediagroup/service-client-statsd/compare/v3.1.0...v3.2.0) (2022-12-07)
 
 
