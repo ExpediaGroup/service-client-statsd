@@ -61,7 +61,7 @@
     "statsd-client": "^0.4.5"
   },
   "devDependencies": {
-    "@hapi/boom": "^9.0.0",
+    "@hapi/boom": "^10.0.1",
     "@hapi/hapi": "^20.2.1",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
