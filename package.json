@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "@hapi/boom": "^9.0.0",
-    "@hapi/hapi": "^20.2.1",
+    "@hapi/hapi": "^21.2.2",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@vrbo/service-client": "^4.0.0",
