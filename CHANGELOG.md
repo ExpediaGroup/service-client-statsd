@@ -1,3 +1,10 @@
+## [3.2.2](https://github.com/expediagroup/service-client-statsd/compare/v3.2.1...v3.2.2) (2023-02-16)
+
+
+### Bug Fixes
+
+* Altering the order of semantic release config file to have it correct ([#70](https://github.com/expediagroup/service-client-statsd/issues/70)) ([c1d8171](https://github.com/expediagroup/service-client-statsd/commit/c1d8171db3f9f5734c6c9e7ab924ff75590141d8))
+
 ## [3.2.1](https://github.com/expediagroup/service-client-statsd/compare/v3.2.0...v3.2.1) (2023-01-09)
 
 
