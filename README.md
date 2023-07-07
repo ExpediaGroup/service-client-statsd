@@ -1,8 +1,8 @@
-# @vrbo/service-client-statsd
-[![NPM Version](https://img.shields.io/npm/v/@vrbo/service-client-statsd.svg?style=flat-square)](https://www.npmjs.com/package/@vrbo/service-client-statsd)
-![](https://github.com/ExpediaGroup/service-client-statsd/workflows/Node_CI/badge.svg)
-[![Dependency Status](https://david-dm.org/expediagroup/service-client-statsd.svg?theme=shields.io)](https://david-dm.org/expediagroup/service-client-statsd)
+![Node.js Version](https://img.shields.io/badge/node->=14.0.0-brightgreen.svg?longCache=true&style=flat&logo=node.js)
+![NPM Version](https://img.shields.io/badge/npm->=6.0.0-brightgreen.svg?longCache=true&style=flat&logo=npm)
 [![NPM Downloads](https://img.shields.io/npm/dm/@vrbo/service-client-statsd.svg?style=flat-square)](https://npm-stat.com/charts.html?package=@vrbo/service-client-statsd)
+
+# @vrbo/service-client-statsd
 
 A [Service Client](https://github.com/expediagroup/service-client) plugin for reporting operational metrics to a [StatsD](https://github.com/statsd/statsd) daemon.
 
