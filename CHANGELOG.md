@@ -1,3 +1,10 @@
+## [3.3.1](https://github.com/expediagroup/service-client-statsd/compare/v3.3.0...v3.3.1) (2023-07-07)
+
+
+### Bug Fixes
+
+* replaced eslint-plugin-node with eslint-plugin-n ([#110](https://github.com/expediagroup/service-client-statsd/issues/110)) ([4056c15](https://github.com/expediagroup/service-client-statsd/commit/4056c1512036419defd2c666903d679e3a7259a7))
+
 # [3.3.0](https://github.com/expediagroup/service-client-statsd/compare/v3.2.2...v3.3.0) (2023-02-21)
 
 
