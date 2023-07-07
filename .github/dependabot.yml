@@ -14,6 +14,9 @@ updates:
       - "@ExpediaGroup/catalyst-committers"
     open-pull-requests-limit: 10
     ignore:
+      # Ignore Node plugin for ESLint
+      - dependency-name: "eslint-plugin-n"
+        update-types: ["version-update:semver-major"]
       # Ignore Hapi major updates
       - dependency-name: "@hapi/hapi"
         update-types: ["version-update:semver-major"]
