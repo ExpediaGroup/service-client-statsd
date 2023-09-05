@@ -2,6 +2,9 @@
 ![NPM Version](https://img.shields.io/badge/npm->=6.0.0-brightgreen.svg?longCache=true&style=flat&logo=npm)
 [![NPM Downloads](https://img.shields.io/npm/dm/@vrbo/service-client-statsd.svg?style=flat-square)](https://npm-stat.com/charts.html?package=@vrbo/service-client-statsd)
 
+# :warning: **Deprecation Notice** :warning:
+This package is now deprecated and will not receive any updates in the future.
+
 # @vrbo/service-client-statsd
 
 A [Service Client](https://github.com/expediagroup/service-client) plugin for reporting operational metrics to a [StatsD](https://github.com/statsd/statsd) daemon.
